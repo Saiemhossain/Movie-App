@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.wrapper{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+img{
+  max-width: 100%;
+}
+
+.logo{
+  width: 140px;
+}
+.header-section{
+  background: #032541;
+  padding: 16px;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+nav ul li {
+ display: flex;
+justify-content: space-between;
+align-items: center;
+  gap: 15px;
+}
+
+nav ul li a{
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(255,225,255);
+ font-family: "Open Sans", sans-serif;
+ font-weight: 600;
+}
+.hero-section {
+  background-image: url('/assets/bg.jpg');
+}
+.hero-sec h1{
+  text-align: center;
+  padding-top: 80px;
+  font-size: 48px;
+  line-height: 48px;
+   font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: rgb(255,225,255);
+}
+
+.hero-sec h2{
+  text-align: center;
+  font-size: 40px;
+  line-height: 44px;
+   font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: rgb(255,225,255);
+}
+
+.search-input{
+  background: white;
+   text-align: center;
+   margin:0 auto;
+  display: block;
+  margin-top: 20px;
+padding: 20px 10px;
+  width: 90%;
+  display: flex;
+ align-items: center;
+  gap: 20px;
+  justify-content: space-around;
+  border-radius: 15px;
+}
+.hero-sec input{
+   width: 96%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  padding: 10px;
+  outline: none;
+}
+.hero-sec input::placeholder{
+  font-size: 18px;
+}
+
+.btn-hero button{
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 15px;
+  background: #14C9BE;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+outline: none;
+font-weight: 500;
+}
+
+.icon-area{
+margin-right: 25px;
+  font-size: 18px;
+  color:#fff;
+  padding-top: 5px;
+  display: none;
+}
+
+.menu-icon{
+  width: 30px;
+ cursor: pointer;
+ color: black;
+}
+
+.hamburger{
+display: none;
+}
+.close{
+  display: none;
+}
+
+
+.mobile-menu{
+  display: none;
+}
+.mobile-logo{
+  display: none;
+}
+
+.mobile-menu {
+ background: #fff;
+  position: fixed;
+  padding: 10px;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  left: -100%; 
+  transition: left 0.5s ease; 
+  z-index: 1000;
+  font-family: "Open Sans", sans-serif;
+ }
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu  ul li a {
+  text-decoration: none;
+  color: #000 !important; /* Menu link color should be white */
+  font-size: 20px;
+}
+
+ nav ul li  a{
+  text-decoration: none;
+  color: white;
+    font-size: 20px;
+
+}
+
+.movie-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin-top: 40px;
+  padding: 10px;
+}
+.movie-card img{
+  width: 350px;
+}
+.movie-card{
+text-align: center;
+}
+h4{
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+p{
+  font-size: 15px;
+}
+.link-anchor{
+  font-size: 20px;
+  text-decoration: none;
+}
+.heading{
+  text-align: center;
+  margin-top: 20px;
+  color: #032541;
+}
+
+.movie-detail{
+  margin-top: 30px;
+  text-align: center;
+}
+.movie-detail h1{
+  font-size: 30px;
+}
+.movie-detail img{
+  width: 500px;
+  
+}
+
+/*
+*Responsive web Design
+*/
+
+ @media (max-width: 850px){
+  .hero-sec h1{
+    font-size: 30px;
+  }
+  .hero-sec h2{
+   font-size: 25px;
+  }
+ }
+
+ @media (max-width:667px) {
+  nav ul li a{
+display: block;
+}
+ .hamburger{
+    display: block;
+  }
+  .mobile-menu{
+    display: block;
+  }
+  nav{
+    display: none;
+  }
+
+    .menu-icon{
+  display: block;
+    position: fixed;
+    top: 15px; 
+    right:0; 
+    z-index: 1001;
+    width: 30px;
+    cursor: pointer;
+}
+
+.movie-detail img{
+  width: 90%;
+}
+.movie-detail h1{
+  font-size: 25px;
+}
+.movie-detail h4{
+  font-size: 20px;
+}
+
+
+ }
+ @media (max-width:427px) {
+  .icon-area{
+    display: block;
+  }
+    .search-input{
+      background: none;
+    }
+    .input-sec{
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+ }
+
+ @media (max-width:420px) {
+  .hero-sec h1{
+    font-size: px;
+  }
+  .hero-sec h2{
+    font-size: 25px;
+  }
+  .search-input{
+    flex-direction: column;
+  }
+  .btn-hero{
+    padding-top: 10px;
+  }
+  .search-input{
+    margin-bottom: 20px;
+  }
+  .movie-list{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+ }
+ 
